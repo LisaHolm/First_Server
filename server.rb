@@ -1,10 +1,14 @@
 require 'sinatra'
 
 get '/' do
-  "Hello world"
+  send_file File.join(settings.public_folder, 'hello.txt')
 end
+
+# get '/' do
+#   "Hello world"
+# end
 
 
 get '/sinatra' do
-  "Hello world"
+  "Hello Sinatra"
 end
